@@ -5,13 +5,13 @@ class User {
     String login
     String password
     String name
-    Boolean isTeacher
+    String role = "Student"
 
     static constraints = {
         login(unique:true)
         password(password:true)
         name()
-        isTeacher(blank: false, nullable: false)
+        role(inList:["Teacher", "Student"])
     }
 
     String toString () {
