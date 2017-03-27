@@ -23,8 +23,19 @@
             <span class="icon-bar"> </span>
         </button>
             <a class="navbar-brand" href="/" style="text-decoration: none;"> Rate Git</a>
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <g:if test="${session.user}">
+                        <li class=""><a class="" href="/user/logout" style="text-decoration: none;"> Logout</a></li>
+                    </g:if>
+                    <!--<li class=""><a href="#">Profile</a> </li>-->
+                </ul>
+            </div>
         </div>
     </nav>
+    <div style="padding-bottom: 100px;">
+    </div>
     <g:layoutBody/>
     <div class="navbar  navbar-inverse navbar-fixed-bottom" style="position: relative; bottom: 0;">
         <div class="container">

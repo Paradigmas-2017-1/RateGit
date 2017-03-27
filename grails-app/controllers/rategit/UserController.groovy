@@ -15,7 +15,7 @@ class UserController {
         if (user) {
             session.user = user
             flash.message = "Hello ${user.name}!"
-            redirect(controller:"entry", action:"list")
+            redirect(controller:"user", action:"index")
         } else {
             flash.message = "Sorry, ${params.login}. Please try again."
             redirect(action:"login")
@@ -25,14 +25,18 @@ class UserController {
     def logout = {
         flash.message = "Goodbye ${session.user.name}"
         session.user = null
-        redirect(controller:"entry", action:"list")
+        redirect(controller:"user", action:"login")
     }
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond User.list(params), model:[userCount: User.count()]
+        if (session.user) {
+            respond User.list(params), model:[userCount: User.count()]
+        } else {
+            redirect(action:"login")
+        }
     }
 
     def show(User user) {
@@ -62,7 +66,8 @@ class UserController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), user.id])
-                redirect user
+                // redirect user
+                redirect(action:"login")                
             }
             '*' { respond user, [status: CREATED] }
         }

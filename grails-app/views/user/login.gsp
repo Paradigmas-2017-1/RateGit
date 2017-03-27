@@ -5,7 +5,7 @@
     <title>Login</title>
     <style scooped>
       .login-form {
-        padding: 90px;
+        padding: 40px;
         text-align: center;
       }
     </style>
