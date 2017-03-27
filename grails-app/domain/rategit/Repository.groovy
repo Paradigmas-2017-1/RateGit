@@ -4,6 +4,7 @@ class Repository {
 
 	String repositoryID
 	String repositoryName
+	String repositoryLink
 
 	static belongsTo = [user: User]
 

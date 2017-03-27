@@ -9,12 +9,12 @@
         <a href="#list-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-                <!--<li><a class="home" href="${createLink(uri: '/')}"><g:message code="teste"/></a></li>-->
-                <li><g:link class="create btn btn-lg btn-success" action="create" style="margin-left: 20px"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="Principal"/></a></li>
+                <li><g:link class="create btn btn-lg btn-warning" action="create" style="margin-left: 20px"><g:message code="Novo Usuário" args="[entityName]" /></g:link></li>
             </ul>
         </div>
         <div id="list-user" class="content scaffold-list table" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
+            <h1><g:message code="Lista de Usuários" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
