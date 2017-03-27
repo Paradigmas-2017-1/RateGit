@@ -23,10 +23,15 @@
             <span class="icon-bar"> </span>
         </button>
             <a class="navbar-brand" href="/" style="text-decoration: none;"> Rate Git</a>
-            <g:if test="${session.user}">
-                <a class="navbar-brand" href="/" style="text-decoration: none;"> Rate Git</a>
-            </g:if>
-            <a class="navbar-brand" href="/" style="text-decoration: none;"> Rate Git</a>
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <g:if test="${session.user}">
+                        <li class=""><a class="" href="/user/logout" style="text-decoration: none;"> Logout</a></li>
+                    </g:if>
+                    <!--<li class=""><a href="#">Profile</a> </li>-->
+                </ul>
+            </div>
         </div>
     </nav>
     <div style="padding-bottom: 100px;">
