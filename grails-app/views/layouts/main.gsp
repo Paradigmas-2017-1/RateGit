@@ -27,6 +27,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <g:if test="${session.user}">
+                        <li class=""><a class="" href="/user/index" style="text-decoration: none;"> Usuários</a></li> 
+                        <li class=""><a class="" href="/repository/index" style="text-decoration: none;"> Repositórios</a></li> 
+                        <li class=""><a class="" href="/rating/index" style="text-decoration: none;"> Avaliações</a></li> 
                         <li class=""><a class="" href="/user/logout" style="text-decoration: none;"> Logout</a></li>
                     </g:if>
                     <!--<li class=""><a href="#">Profile</a> </li>-->

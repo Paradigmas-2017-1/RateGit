@@ -11,4 +11,8 @@ class Repository {
 
     static constraints = {
     }
+
+    String toString() {
+    	return repositoryName
+    }
 }

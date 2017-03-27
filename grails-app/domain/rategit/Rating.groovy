@@ -9,4 +9,8 @@ class Rating {
 
     static constraints = {
     }
+
+    String toString() {
+    	return rating
+    }
 }
