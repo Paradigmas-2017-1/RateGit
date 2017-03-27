@@ -7,7 +7,7 @@ class User {
     String name
     String role = "Student"
 
-    static hasMany = [repositorys: Repository]
+    static hasMany = [repositorys: Repository, ratings: Rating]
 
     static constraints = {
         login(unique:true)

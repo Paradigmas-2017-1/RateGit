@@ -7,6 +7,8 @@ class Repository {
 
 	static belongsTo = [user: User]
 
+	static hasMany = [ratings: Rating]
+
     static constraints = {
     }
 }
