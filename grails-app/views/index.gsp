@@ -44,9 +44,7 @@
     </content>
 
     <!-- <div class="svg" role="presentation"> -->
-        <div class="grails-logo-container">
-            <br>
-            <br>
+        <div class="grails-logo-container"  style="padding-top: 60px;">
             <asset:image src="rategit.png"/>
         </div>
     <!-- </div> -->
@@ -55,15 +53,18 @@
         <section class="row colset-2-its">
             <h1>Welcome to RateGit
                 <div id="controllers" role="navigation" class="row colset-2-its">
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <br>
-                        <br>
+                    <!--<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                         <div class="controller">
                             <g:link controller="${c.logicalPropertyName}">
-                            <div class="btn btn-primary btn-lg">Login</div>
+                            <div class="btn btn-primary btn-lg">${c.name}</div>
                             </g:link>
                         </div>
-                    </g:each>
+                    </g:each>-->
+                    <div class="controller" style="padding-top: 40px;">
+                        <g:link controller="user">
+                        <div class="btn btn-primary btn-lg">Login</div>
+                        </g:link>
+                    </div>
                 </div>
             </h1>
             <br>
